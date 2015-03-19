@@ -1,0 +1,1 @@
+No real projects or applications, just some sample coding problems to play around with.  Some of the problems come from various books and web sites. Those problems should be under a directory with a name that identifies the source.
