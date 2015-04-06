@@ -26,18 +26,29 @@ namespace Q9_2cs
         static void Main(string[] args)
         {
             int x = 1, y = 1;
-            string path = "";
+            string path = "", msg = "";
+
             xMax = getxyMax("X");
             yMax = getxyMax("Y");
             getExclude();
             FindPath(x, y, path);
+
             if(pathCount != 0){
-                Console.WriteLine("There are " + pathCount + " paths to go from (1, 1) to (" + xMax + ", " + yMax + ").");
+                if (pathCount == 1)
+                {
+                    msg = "There is 1 path to go from (1, 1) to (" + xMax + ", " + yMax + ")."; 
+                }
+                else
+                {
+                    msg = "There are " + pathCount + " paths to go from (1, 1) to (" + xMax + ", " + yMax + ").";
+                }
             }
             else
             {
-                Console.WriteLine("There are no paths from (1, 1) to (" + xMax + ", " + yMax + ").");
+                msg = "There are no paths from (1, 1) to (" + xMax + ", " + yMax + ").";
             }
+
+            Console.WriteLine(msg);
 
         } // End: Main
 
